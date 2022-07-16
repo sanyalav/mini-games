@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 align="center">Games</h1>
+    <button id="music" onclick="play_music()">Music On</button>
+    <table border="1" style="border-spacing: 20px; margin-left: auto; margin-right: auto;">
+        <tr>
+            <td style="padding: 20px;">
+                <!-------------------1. Treasure Game----------------------->
+                <h2>1. Treasure - <span id="answer">Click on map!</span></h2>
+                <img id="map" width="400px" height="400px"
+                    src="./img/1.png" onclick="click_map(event)">
+            </td>
+            <td style="padding: 20px;">
+                <!----------------------2. Dice Game------------------------>
+                <h2>2. Dice</h2>
+                <input type="text" value="You" id="player1" maxlength="3"></input>
+                <input type="text" value="Mac" id="player2" maxlength="3"></input><br><br>
+                <button onclick="Player1()">Submit</button>
+                <button onclick="Player2()">Submit</button><br><br>
+    <table border="1">
+        <tr>
+            <td colspan="3"><b>Dice</b></td>
+        </tr>
+        <tr>
+            <td id="name1">You</td>
+            <td id="name2">Mac</td>
+            <td>Result</td>
+
+        </tr>
+        <tr>
+            <td><img src="./img/Dice-1.png" id="img1" width="60px" height="60px"></td>
+            <td><img src="./img/Dice-1.png" id="img2" width="60px" height="60px"></td>
+            <td><img src="./img/empty.png" id="result_field" width="60px;" height="60px"></td>
+        </tr>
+        <tr>
+            <td id="dice1">1</td>
+            <td id="dice2">1</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td id="res1">Draw</td>
+            <td id="res2">Draw</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td id="sum1">0</td>
+            <td id="sum2">0</td>
+            <td>Score</td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div id="progress1">
+                    <div id="bar1"></div>
+                </div>
+            </td>
+            <td>
+                <div id="progress2">
+                    <div id="bar2"></div>
+                </div>
+            </td>
+            </td>
+            <td>Total</td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <input type="submit" value="Roll Dice" id="roll" onclick="Roll()"></input>
+            </td>
+        </tr>
+    </table>
+    </div>
+            </td>
+            <td style="padding: 20px; white-space: nowrap;">
+                <!-----------------------3. Fifteen Game-------------------------->
+                <h2>3. Fifteen</h2>
+                <img src="./img/15.png" width="60px" height="60px" id="image1"></img>
+                <img src="./img/14.png" width="60px" height="60px" id="image2"></img><br><br>
+                <button onclick="help(msg)">Submit</button><br><br>
+    <table border="1"><tr><td>
+    <input type="button" value="1" id="1" onclick="btn1_click()"></input>
+    <input type="button" value="2" id="2" onclick="btn2_click()"></input>
+    <input type="button" value="3" id="3" onclick="btn3_click()"></input>
+    <input type="button" value="4" id="4" onclick="btn4_click()"></input>
+    <br>
+    <input type="button" value="5" id="5" onclick="btn5_click()"></input>
+    <input type="button" value="6" id="6" onclick="btn6_click()"></input>
+    <input type="button" value="7" id="7" onclick="btn7_click()"></input>
+    <input type="button" value="8" id="8" onclick="btn8_click()"></input>
+    <br>
+    <input type="button" value="9" id="9" onclick="btn9_click()"></input>
+    <input type="button" value="10" id="10" onclick="btn10_click()"></input>
+    <input type="button" value="11" id="11" onclick="btn11_click()"></input>
+    <input type="button" value="12" id="12" onclick="btn12_click()"></input>
+    <br>
+    <input type="button" value="13" id="13" onclick="btn13_click()"></input>
+    <input type="button" value="14" id="14" onclick="btn14_click()"></input>
+    <input type="button" value="15" id="15" onclick="btn15_click()"></input>
+    <input type="button" value=" " id="16" onclick="btn16_click()"></input>
+    <br><br>
+    <input type="button" value="Start" id="start" onclick="start()"></input>
+    <input type="button" value="Help" id="start" onclick="help(msg)"></input>
+    </td></tr></table>
+            </td>
+            
+            
+        </tr>
+        <tr>
+            <td style="padding: 20px;">
+                <!----------------4. Bulls and Cows Game---------------->
+                <h2>4. Bulls and Cows</h2>
+                <table style="margin-left: auto; margin-right: auto;" border="1">
+                    <tr>
+                        <td>
+                            <input type="number" id="numb1" value="0" min="0" max="9"></input>
+                        </td>
+                        <td>
+                            <input type="number" id="numb2" value="0" min="0" max="9"></input>
+                        </td>
+                        <td>
+                            <input type="number" id="numb3" value="0" min="0" max="9"></input>
+                        </td>
+                        <td>
+                            <input type="number" id="numb4" value="0" min="0" max="9"></input>
+                        </td>
+                        <td colspan="2">
+                            <input type="button" id="ent" value="ENT" onclick="ent()"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>No 1</p>
+                            <p id="id1_1">_</p><p id="id2_1">_</p><p id="id3_1">_</p><p id="id4_1">_</p>
+                            <p id="id5_1">_</p><p id="id6_1">_</p><p id="id7_1">_</p><p id="id8_1">_</p>
+                        </td>
+                        <td>
+                            <p>No 2</p>
+                            <p id="id1_2">_</p><p id="id2_2">_</p><p id="id3_2">_</p><p id="id4_2">_</p>
+                            <p id="id5_2">_</p><p id="id6_2">_</p><p id="id7_2">_</p><p id="id8_2">_</p>
+                        </td>
+                        <td>
+                            <p>No 3</p>
+                            <p id="id1_3">_</p><p id="id2_3">_</p><p id="id3_3">_</p><p id="id4_3">_</p>
+                            <p id="id5_3">_</p><p id="id6_3">_</p><p id="id7_3">_</p><p id="id8_3">_</p>
+                        </td>
+                        <td>
+                            <p>No 4</p>
+                            <p id="id1_4">_</p><p id="id2_4">_</p><p id="id3_4">_</p><p id="id4_4">_</p>
+                            <p id="id5_4">_</p><p id="id6_4">_</p><p id="id7_4">_</p><p id="id8_4">_</p>
+                        </td>
+                        <td>
+                            <p>Bulls</p>
+                            <p id="id1_5">_</p><p id="id2_5">_</p><p id="id3_5">_</p><p id="id4_5">_</p>
+                            <p id="id5_5">_</p><p id="id6_5">_</p><p id="id7_5">_</p><p id="id8_5">_</p>
+                        </td>
+                        <td>
+                            <p>Cows</p>
+                            <p id="id1_6">_</p><p id="id2_6">_</p><p id="id3_6">_</p><p id="id4_6">_</p>
+                            <p id="id5_6">_</p><p id="id6_6">_</p><p id="id7_6">_</p><p id="id8_6">_</p>
+                        </td>
+                    </tr>
+                
+                
+                </table>
+            <td style="padding: 20px;">
+                <!---------------5. Rock Paper Scissors Game--------------------->
+                <h2>5. R.P.S</h2>
+                <input type="text" value="You" id="player1" maxlength="3"></input>
+                <input type="text" value="Mac" id="player2" maxlength="3"></input><br><br>
+                <button onclick="Player1()">Submit</button>
+                <button onclick="Player2()">Submit</button><br><br>
+                <table border="1">
+                    <tr>
+                        <td colspan="3"><b>Rock Paper Scissors</b></td>
+                    </tr>
+                    <tr>
+                        <td>You</td>
+                        <td>Mac</td>
+                        <td>Result</td>
+                    <tr>
+                        <td>
+                            <img src="./img/empty.png" width="60px" height="60px" id="your_choice">
+                        </td>
+                        <td>
+                            <img src="./img/empty.png" width="60px" height="60px" id="mac_choice">
+                        </td>
+                        <td>
+                            <img src="./img/empty.png" width="60px" height="60px" id="result_icon">
+                        </td>
+                    </tr>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Select your option</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="./img/rock2.png" width="60px" height="60px" onclick="rock()">
+                        </td>
+                        <td>
+                            <img src="./img/paper2.png" width="60px" height="60px" onclick="paper()">
+                        </td>
+                        <td>
+                            <img src="./img/scissors2.png" width="60px" height="60px" onclick="scissors()">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <input type="button" value="Go" id="go" onclick="Go()"></input>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td style="padding: 20px;">
+                <!-----------------6. Hanoi Numbers Game------------------>
+                <h2>6. Hanoi Nums</h2>
+                <table>
+                    <tr>
+                        <td>
+                            <input type="button" id="level" value="L: 1" onclick="level_up()"></input>
+                        </td>
+                        <td>
+                            <label id="moves">Go: 0</label>
+                        </td>
+                        <td>
+                            <label id="min_moves">Min: 1</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" id="button1" onclick="button1_click()" value="1"></input>
+                        </td>
+                        <td colspan="2">
+                            <label id="list1">1</label>
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" id="button2" onclick="button2_click()" value="2"></input>
+                        </td>
+                        <td colspan="2">
+                            <label id="list2"></label>
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" id="button3" onclick="button3_click()" value="3"></input>
+                        </td>
+                        <td colspan="2">
+                            <label id="list3"></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button style="width: 10px; height: 20px;"></button><br>
+                            <button style="width: 20px; height: 20px;"></button><br>
+                            <button style="width: 30px; height: 20px;"></button><br>
+                            <button style="width: 40px; height: 20px;"></button><br>
+                            <button style="width: 50px; height: 20px;"></button><br>
+                            <button style="width: 60px; height: 20px;"></button><br>
+                            <button style="width: 70px; height: 20px;"></button>
+                        </td>
+                        <td>
+                            <button style="width: 10px; height: 155px;"></button><br>
+                            <button style="width: 70px; height: 20px;" onclick="helpMenu()">Help</button>
+
+                        </td>
+                        <td>
+                            <button style="width: 10px; height: 155px;"></button><br>
+                            <button style="width: 70px; height: 20px;">...</button>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+<script src="js.js"></script>
+</html>
